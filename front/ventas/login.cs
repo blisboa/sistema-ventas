@@ -24,7 +24,26 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("GRABANDO...");
+            string clave = textclave.Text;
+
+            if(clave=="123")
+                MessageBox.Show("bienvenido al sistema");
+            else
+            MessageBox.Show("usuario y/o constraseña es incorrectos");
+        }
+
+        private void Btnclave_Click(object sender, EventArgs e)
+        {
+            if (Btnclave.Text == "ocultar")
+            {
+                Btnclave.Text = "ver";
+                textclave.PasswordChar = '*';
+            }
+            else
+            {
+                Btnclave.Text = "ocultar";
+                textclave.PasswordChar = '\0';
+            }
         }
     }
 }
