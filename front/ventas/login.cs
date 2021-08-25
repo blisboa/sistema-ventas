@@ -24,7 +24,31 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("GRABANDO...");
+            string clave = txtpass.Text;
+
+            if (clave == "123")
+                MessageBox.Show("Bienvenido al sistema");
+            else
+                MessageBox.Show("Usuario y/o Clave incorrecta");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (btnpass.Text == "Ver")
+            {
+                btnpass.Text = "Ver";
+                txtpass.PasswordChar = '*';
+            }
+            else
+            {
+                btnpass.Text = "Ocultar";
+                txtpass.PasswordChar = '\0';
+            }
         }
     }
 }
