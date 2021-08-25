@@ -24,6 +24,7 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string clave = txtpass.Text;
 
             if (clave == "123")
@@ -41,14 +42,18 @@ namespace ventas
         {
             if (btnpass.Text == "Ver")
             {
-                btnpass.Text = "Ver";
-                txtpass.PasswordChar = '*';
-            }
-            else
-            {
                 btnpass.Text = "Ocultar";
                 txtpass.PasswordChar = '\0';
             }
+            else
+            {
+                btnpass.Text = "Ver";
+                txtpass.PasswordChar = '*';
+
+            
+        }
+
+       
         }
     }
 }
